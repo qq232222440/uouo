@@ -1,0 +1,485 @@
+<html>
+<head>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+
+<script>!function(a,b){var c=a.documentElement,d="orientationchange"in window?"orientationchange":"resize",e=function(){var a=c.clientWidth;a&&(a>=750&&(a=750),c.style.fontSize=100*(a/750)+"px")};a.addEventListener&&(b.addEventListener(d,e,!1),e())}(document,window);</script>
+
+	<script src="./common.js"></script>
+	<style>
+	
+	
+	@charset "utf-8";fieldset,hr,img {
+    border: 0
+}
+
+button,input,input[type=button] {
+    -webkit-appearance: none;
+    outline: 0
+}
+
+a,body,html {
+    -webkit-touch-callout: none
+}
+
+a,a:hover {
+    text-decoration: none
+}
+
+:focus,a,a:focus,button,input {
+    outline: 0
+}
+
+.cp,a,input[type=button],input[type=submit],label {
+    cursor: pointer
+}
+
+.abs-rt,.abs-top {
+    top: 0
+}
+
+.abs-rb,.abs-rt {
+    right: 0
+}
+
+.abs-bottom,.abs-lb,.abs-rb {
+    bottom: 0
+}
+
+.clearfix,.zoom {
+    zoom:1}
+
+body,html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch
+}
+
+.clear,.clearfix:after {
+    overflow: hidden;
+    clear: both
+}
+
+article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul {
+    margin: 0;
+    padding: 0
+}
+
+body,button,input,select,textarea {
+    font-family: "Hiragino Sans GB","Helvetica Neue",Helvetica,STHeiTi,"Microsoft Yahei",sans-serif;
+    color: #666;
+    background-color: #fff;
+    position: relative
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400
+}
+
+textarea {
+    resize: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+th {
+    text-align: inherit
+}
+
+img {
+    vertical-align: middle
+}
+
+abbr,acronym {
+    border: none;
+    font-variant: normal
+}
+
+del {
+    text-decoration: line-through
+}
+
+hr {
+    height: 1px;
+    background-color: #D9D9D9
+}
+
+li,ol,ul {
+    list-style: none
+}
+
+input,select,textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit
+}
+
+button,input {
+    border: 0;
+    background: 0
+}
+
+a {
+    color: #666;
+    -webkit-tap-highlight-color: rgba(0,0,0,.1)
+}
+
+em,i {
+    font-style: normal
+}
+
+* {
+    box-sizing: border-box;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word
+}
+
+.clearfix:after,.clearfix:before {
+    content: "";
+    display: table
+}
+
+.clear {
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0
+}
+
+.cd {
+    cursor: default
+}
+
+.cna {
+    cursor: not-allowed
+}
+
+.tl {
+    text-align: left
+}
+
+.tc {
+    text-align: center
+}
+
+.tr {
+    text-align: right
+}
+
+.bc {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.cb {
+    clear: both
+}
+
+.cl {
+    clear: left
+}
+
+.cr {
+    clear: right
+}
+
+.vt {
+    vertical-align: top
+}
+
+.vm {
+    vertical-align: middle
+}
+
+.vb {
+    vertical-align: bottom
+}
+
+.pr {
+    position: relative
+}
+
+.abs-bottom,.abs-lb,.abs-lt,.abs-rb,.abs-rt,.abs-top,.pa {
+    position: absolute
+}
+
+.abs-left,.abs-right {
+    position: absolute;
+    right: 0
+}
+
+.abs-lt {
+    left: 0;
+    top: 0
+}
+
+.abs-lb {
+    left: 0
+}
+
+.hidden {
+    visibility: hidden
+}
+
+.none {
+    display: none
+}
+
+.ib {
+    display: inline-block
+}
+
+.inline {
+    display: inline
+}
+
+.block {
+    display: block
+}
+
+@media screen and (min-width: 212px) {
+    html {
+        font-size:28.4px
+    }
+}
+
+@media screen and (min-width: 319px) {
+    html {
+        font-size:42.67px
+    }
+}
+
+@media screen and (min-width: 359px) {
+    html {
+        font-size:48px
+    }
+}
+
+@media screen and (min-width: 374px) {
+    html {
+        font-size:50px
+    }
+}
+
+@media screen and (min-width: 383px) {
+    html {
+        font-size:51.2px
+    }
+}
+
+@media screen and (min-width: 399px) {
+    html {
+        font-size:53.2px
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font-size:55.2px
+    }
+}
+
+@media screen and (min-width: 423px) {
+    html {
+        font-size:56.53px
+    }
+}
+
+@media screen and (min-width: 479px) {
+    html {
+        font-size:64px
+    }
+}
+
+@media screen and (min-width: 539px) {
+    html {
+        font-size:72px
+    }
+}
+
+@media screen and (min-width: 639px) {
+    html {
+        font-size:85.33px
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    body {
+        width:750px
+    }
+}
+
+.f0 {
+    font-size: 0
+}
+
+body {
+    padding-top: 1.62rem;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 auto
+}
+
+input::-webkit-input-placeholder {
+    color: #d0d0d0
+}
+
+textarea::-webkit-input-placeholder {
+    color: #d0d0d0
+}
+
+	/**加载**/
+		.svg {
+    position: absolute;
+    top: 1.4rem;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #fff
+}
+
+.read-position,.recommend-news {
+    text-align: center;
+    vertical-align: middle;
+    color: #2a90d7;
+    background: rgba(213,233,247,.9)
+}
+
+.svg.active {
+    -webkit-animation: myrotate 1s infinite ease-in-out;
+    animation: myrotate 1s infinite ease-in-out
+}
+
+@-webkit-keyframes myrotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes myrotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+	</style>
+</head>
+<body>
+<div id="J_news_list" style="width:100%;height:300px;">
+
+</div>
+<div id="J_refresh" style="width:100%;height:300px;"></div>
+<div id="J_top_menu" style="width:100%;height:300px;"></div>
+<script>
+pulldown();
+var T = $("body")
+      , x = []
+      , b = []
+      , j = $("#J_news_list")
+      , D = $("#J_refresh")
+      , G = $("#J_top_menu")
+      , B = !0
+      , S = 0
+      , A = 0
+      , P = !0
+      , F = !1
+      , O = !1
+      , N = null
+      , C = 150
+      , J = null
+
+      , E = null
+      , I = !0
+      , R = !1
+function pulldown(){
+var j = document.body
+	var e = this
+              , a = 0;
+            j.addEventListener("touchstart", function(e) {
+                clearTimeout(J),
+                S = e.touches[0].pageY,
+                O = T.scrollTop() <= 0,
+                N ? N.removeClass("active").css({
+                    display: "block",
+                    opacity: 0,
+                    top: a,
+                    transform: "translateY(0px)",
+                    "-webkit-transform": "translateY(0px)"
+                }) : (a = $("header").height() - 40,
+                N = $('<svg id="J_svg" class="svg" style="top: ' + a + 'px"><g id="J_svg_g"><marker id="J_svg_marker" markerWidth="10" markerHeight="10" refX="0" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L0,10 L5,5 L0,0" style="fill: #d43d3d;"></path></marker><path stroke-width="3.5" stroke-linecap="round" id="J_svg_path" marker-end="url(#J_svg_marker)" d="M20,9 A11,11 0 1,1 10.5,14.5" style="stroke: #d43d3d; fill: none;"></path><circle id="J_svg_circle" class="path" fill="none" stroke-width="3.5" stroke-linecap="round" cx="25" cy="25" r="11"></circle></g></svg>'))
+            }),
+            j.addEventListener("touchend", function() {
+                F && (A >= C ? N.animate({
+                    top: a + C / 3 + "px"
+                }, "fast", function() {
+                    N && N.addClass("active"),
+                    clearTimeout(J),
+                    J = setTimeout(function() {
+                        "meinv" === e.newsType ? N && N.remove() : (e.changeRefreshStatus(),
+                        e.pullDownLoadData(function() {
+                            setTimeout(function() {
+                                N && N.fadeOut("fast", function() {
+                                    N.remove()
+                                })
+                            }, 500)
+                        }))
+                    }, 200)
+                }) : N && N.animate({
+                    opacity: 0,
+                    top: a
+                }, "fast", function() {
+                    N.remove()
+                })),
+                P = !0,
+                F = !1
+            }),
+            j.addEventListener("touchmove", function(e) {
+                var t = e.touches[0].pageY;
+                A = t - S,
+                O && P && A > 0 && (F = !0,
+                P = !1),
+                O && F && (0 === T.find(".svg").length && N.appendTo("body"),
+                A >= C ? (N.find("#J_svg_marker>path").attr("style", "fill:#2a90d7"),
+                N.find("#J_svg_g>path").attr("style", "stroke:#2a90d7;fill:none"),
+                A >= C + 80 && (A = C + 80)) : (N.find("#J_svg_marker>path").attr("style", "fill:#d43d3d"),
+                N.find("#J_svg_g>path").attr("style", "stroke:#d43d3d;fill:none")),
+                N.css({
+                    opacity: A / C,
+                    transform: "rotate(" + A / C * 720 + "deg)",
+                    "-webkit-transform": "rotate(" + A / C * 720 + "deg)",
+                    top: a + A / 3 + "px"
+                }),
+                e.preventDefault())
+            })
+}
+</script>
+</body>
+</html>
