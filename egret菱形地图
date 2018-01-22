@@ -1,0 +1,75 @@
+ //一个菱形地板
+    public DarwCell(tileWidth: number, tileHight: number, index: string): egret.Sprite {
+        var tile: egret.Sprite = new egret.Sprite();
+        tile.graphics.lineStyle(1, 0xffffff);//设置画笔线性和颜色
+        tile.graphics.beginFill(0x000000, 0.5);
+        //创建菱形方块
+        tile.graphics.moveTo(0, tileHight / 2);
+        tile.graphics.lineTo(tileWidth / 2, 0);
+        tile.graphics.lineTo(tileWidth, tileHight / 2);
+        tile.graphics.lineTo(tileWidth / 2, tileHight);
+        tile.graphics.lineTo(0, tileHight / 2);
+        tile.graphics.endFill();
+        var txt: egret.TextField = new egret.TextField();
+        tile.addChild(txt)
+        txt.text = index;
+        txt.size = 10;
+        txt.x = tile.width >> 1;
+        txt.y = tile.height >> 1;
+
+        return tile;
+    }
+
+
+
+//创建网格
+
+//200为最左侧格子初始坐标80单元格宽、40单元格高
+
+ private createGrid(): void {
+        var cols: number = 30;//宽-单元格个数
+        var rows: number = 30; //高-单元格个数
+
+
+        for (var j: number = 0; j < cols; j++) {
+            for (var i: number = 0; i < rows; i++) {
+                var cell: egret.Sprite = this.DarwCell(80, 40, i + "." + j);
+                cell.x = 200+(i + j) * 80 / 2;
+                cell.y = 200+(30 - i + j - 1) * 40 / 2;
+                this.addChild(cell);
+            }
+        }
+
+    }
+
+
+
+//坐标点转换到格子坐标
+
+  public PointToGrid2(pixelOffsetX: number, pixelOffextY: number, x: number, y: number): Array<any> {
+        var gridX = (x-pixelOffsetX)/80-(y-pixelOffextY-30*40/2)/40;
+        var gridY = (x-pixelOffsetX)/80+(y-pixelOffextY-30*40/2)/40;
+        return [gridX, gridY];//地图网格索引从零开始
+    }
+
+//格子坐标转换到坐标点
+    public GridToPoint2(pixelOffsetX: number, pixelOffextY: number, gridX: number, gridY: number): Array<any> {
+        var x: number = (gridX+gridY)*80/2+pixelOffsetX;
+        var y: number = (gridY-gridX)/2*40+pixelOffextY+30*40/2;
+        return [x, y];
+    }
+
+//给舞台添加点击事件测试坐标转换
+
+ private mouseDown(evt: egret.TouchEvent) {
+
+
+        this._distance.x = evt.stageX - this.x;
+        this._distance.y = evt.stageY - this.y;
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.mouseMove, this);
+        var gp = this.globalToLocal(evt.stageX,evt.stageY);
+        var gridP = this.PointToGrid2(200,200,gp.x,gp.y);
+        var p = this.GridToPoint2(200,200,gridP[0],gridP[1]);
+        console.log(p);
+        
+    }
